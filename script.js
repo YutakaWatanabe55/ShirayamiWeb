@@ -41,7 +41,7 @@ scene.add(axesHelper)
 
 // VRMモデルの読み込み
 const loader = new THREE.GLTFLoader();
-loader.load('vrmファイルのパス', (gltf) => {
+loader.load('vhttps://github.com/YutakaWatanabe55/ShirayamiWeb/raw/main/3D/UTVOfficial2.vrm', (gltf) => {
   const vrmModel = gltf.scene;
   scene.add(vrmModel);
 });
