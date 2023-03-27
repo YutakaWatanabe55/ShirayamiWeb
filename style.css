@@ -194,7 +194,7 @@ section p {
     
     @media screen and (max-width: 600px) {
     #hero h1 {
-    font-size: 32px;
+    font-size: 64px;
     }
     #hero p {
     font-size: 18px;
