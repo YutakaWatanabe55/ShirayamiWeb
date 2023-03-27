@@ -9,7 +9,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     color: #fff;
-    background-image: url("https://photos.app.goo.gl/C6M27YxevUbtNnEU8");
+    background-image: url("https://github.com/YutakaWatanabe55/ShirayamiWeb/raw/main/img/shimanami.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -51,12 +51,23 @@ nav a:hover {
     background-image: url("https://photos.app.goo.gl/C6M27YxevUbtNnEU8");
     background-size: cover;
     background-position: center;
-    height: 500px;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
+#hero:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10;
+    width: 50%;
+    height: 40%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
 
 #hero h1 {
     font-size: 48px;
@@ -68,7 +79,7 @@ nav a:hover {
 
 #hero p {
     font-size: 24px;
-    color: #000;
+    color: #fff;
     text-align: center;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     margin-bottom: 20px;
@@ -88,6 +99,15 @@ nav a:hover {
     background-color: #000;
 }
 
+.title {
+    display: inline-block;
+    background-color: #ff4d4d;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -104,10 +124,32 @@ section h2 {
     color: #ff4d4d;
 }
 
+#about:before {
+    content: "";
+    position: absolute;
+    top: 5;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+
+  #works:before {
+    content: "";
+    position: absolute;
+    top: 10;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+
 section p {
     font-size: 18px;
     margin-bottom: 20px;
-    color: #000;
+    color: #fff;
 }
 
 .card {
