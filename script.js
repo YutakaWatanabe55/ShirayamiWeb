@@ -1,21 +1,56 @@
-$('.slide-nav').on('click', function(e) {
-  e.preventDefault();
-  // get current slide
-  var current = $('.flex--active').data('slide'),
-    // get button data-slide
-    next = $(this).data('slide');
+// レンダラーの設定
+const renderer = new THREE.WebGLRenderer({
+  antialias: true,
+  alpha: true,
+})
+renderer.setSize(window.innerWidth, window.innerHeight)
+renderer.setPixelRatio(window.devicePixelRatio)
+document.body.appendChild(renderer.domElement)
 
-  $('.slide-nav').removeClass('active');
-  $(this).addClass('active');
+// カメラの設定
+const camera = new THREE.PerspectiveCamera(
+  35,
+  window.innerWidth / window.innerHeight,
+  0.1,
+  1000,
+)
+camera.position.set(0, 1.1, 3)
 
-  if (current === next) {
-    return false;
-  } else {
-    $('.slider__warpper').find('.flex__container[data-slide=' + next + ']').addClass('flex--preStart');
-    $('.flex--active').addClass('animate--end');
-    setTimeout(function() {
-      $('.flex--preStart').removeClass('animate--start flex--preStart').addClass('flex--active');
-      $('.animate--end').addClass('animate--start').removeClass('animate--end flex--active');
-    }, 800);
-  }
+// カメラコントーロールの設定
+const controls = new THREE.OrbitControls(camera, renderer.domElement)
+controls.target.set(0, 0.85, 0)
+controls.screenSpacePanning = true
+controls.update()
+
+// シーンの設定
+const scene = new THREE.Scene()
+
+// ライトの設定
+const light = new THREE.DirectionalLight(0xffffff)
+light.position.set(1, 1, 1).normalize()
+scene.add(light)
+
+// グリッドを表示
+const gridHelper = new THREE.GridHelper(10, 10)
+scene.add(gridHelper)
+gridHelper.visible = true
+
+// 座標軸を表示
+const axesHelper = new THREE.AxesHelper(0.5)
+scene.add(axesHelper)
+
+// VRMモデルの読み込み
+const loader = new THREE.GLTFLoader();
+loader.load('vrmファイルのパス', (gltf) => {
+  const vrmModel = gltf.scene;
+  scene.add(vrmModel);
 });
+
+// 初回実行
+tick()
+
+function tick() {
+  requestAnimationFrame(tick)
+  // レンダリング
+  renderer.render(scene, camera)
+}
