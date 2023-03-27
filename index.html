@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Watanabe Yutaka</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
 </head>
 <body>
     <header>
@@ -40,7 +41,53 @@
             <div class="work">
                 <img src="work1.jpg" alt="制作物1のスクリーンショット">
                 <h3>制作物1のタイトル</h3>
-                <p>制作物1の説明文が入ります。ここには制作物の特徴や目的、使用した技術などを簡潔にまとめて説明します。</p>
+                <div id="animation-container"></div>
+                <script>
+                    // シーンを作成
+                    const scene = new THREE.Scene();
+                    // カメラを作成
+                    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+                    // レンダラーを作成
+                    const renderer = new THREE.WebGLRenderer({ alpha: true });
+                    // レンダラーのサイズを設定
+                    renderer.setSize(400, 400);
+                    // HTMLの要素を取得
+                    const container = document.getElementById("animation-container");
+                    // HTMLにレンダラーを追加
+                    container.appendChild(renderer.domElement);
+                    // カメラの位置を設定
+                    camera.position.z = 5;
+                    
+                    // GLTFファイルを読み込む
+                    const loader = new THREE.GLTFLoader();
+                    loader.load(
+                      'animation.gltf', // ファイルのパス
+                      (gltf) => { // 読み込みが完了したときの処理
+                        const model = gltf.scene;
+                        // シーンにモデルを追加
+                        scene.add(model);
+                        // アニメーションを再生
+                        const mixer = new THREE.AnimationMixer(model);
+                        const clips = gltf.animations;
+                        clips.forEach((clip) => {
+                          mixer.clipAction(clip).play();
+                        });
+                      },
+                      (progress) => { // 読み込み中の処理
+                        console.log((progress.loaded / progress.total * 100) + '% loaded');
+                      },
+                      (error) => { // エラーが発生したときの処理
+                        console.error(error);
+                      }
+                    );
+                    
+                    // アニメーションを更新
+                    const animate = () => {
+                      requestAnimationFrame(animate);
+                      renderer.render(scene, camera);
+                    }
+                    animate();
+                  </script>
                 <a href="#">詳細を見る</a>
             </div>
             <div class="work">
