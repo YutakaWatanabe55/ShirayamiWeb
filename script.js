@@ -39,12 +39,6 @@ gridHelper.visible = true
 const axesHelper = new THREE.AxesHelper(0.5)
 scene.add(axesHelper)
 
-// VRMモデルの読み込み
-const loader = new THREE.GLTFLoader();
-loader.load('vhttps://github.com/YutakaWatanabe55/ShirayamiWeb/raw/main/3D/UTVOfficial2.vrm', (gltf) => {
-  const vrmModel = gltf.scene;
-  scene.add(vrmModel);
-});
 
 // 初回実行
 tick()
@@ -54,3 +48,21 @@ function tick() {
   // レンダリング
   renderer.render(scene, camera)
 }
+// モデルをロード
+const loader = new PromiseGLTFLoader()
+const gltf = await loader.promiseLoad(
+  './models/AliciaSolid.vrm',
+  progress => {
+    console.log(
+      'Loading model...',
+      100.0 * (progress.loaded / progress.total),
+      '%',
+    )
+  },
+)
+// VRMインスタンス生成
+const vrm = await VRM.from(gltf)
+// シーンに追加
+scene.add(vrm.scene)
+vrm.scene.rotation.y = Math.PI
+
