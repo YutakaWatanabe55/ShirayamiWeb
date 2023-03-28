@@ -8,13 +8,17 @@ body {
     font-family: "Helvetica Neue", sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    background-image: url('https://github.com/YutakaWatanabe55/ShirayamiWeb/raw/main/img/Tokyo_tower.jpg'), url('https://github.com/YutakaWatanabe55/ShirayamiWeb/raw/main/img/shimanami.jpg'), url('https://github.com/YutakaWatanabe55/ShirayamiWeb/raw/main/img/future_1.png');
-    background-position: center center, top left, bottom right;
-    background-repeat: no-repeat, repeat-x, repeat-y;
-    background-size: cover, auto, auto;
-    color: #fff;
-    
+        
 }
+
+#background-images {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
 
 header {
     background-color: #000;
