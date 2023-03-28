@@ -8,11 +8,12 @@ body {
     font-family: "Helvetica Neue", sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    background-image: url('https://github.com/YutakaWatanabe55/ShirayamiWeb/raw/main/img/Tokyo_tower.jpg'), url('https://github.com/YutakaWatanabe55/ShirayamiWeb/raw/main/img/shimanami.jpg'), url('https://github.com/YutakaWatanabe55/ShirayamiWeb/raw/main/img/future_1.jpg');
+    background-position: center center, top left, bottom right;
+    background-repeat: no-repeat, repeat-x, repeat-y;
+    background-size: cover, auto, auto;
     color: #fff;
-    background-image: url("https://github.com/YutakaWatanabe55/ShirayamiWeb/raw/main/img/shimanami.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    
 }
 
 header {
@@ -48,7 +49,7 @@ nav a:hover {
 }
 
 #hero {
-    background-image: url("https://photos.app.goo.gl/C6M27YxevUbtNnEU8");
+    background-color: rgba(0, 0, 0, 0.75);
     background-size: cover;
     background-position: center;
     height: 400px;
@@ -58,16 +59,6 @@ nav a:hover {
     flex-direction: column;
 }
 
-#hero:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 10;
-    width: 50%;
-    height: 40%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-  }
 
 #hero h1 {
     font-size: 48px;
@@ -112,7 +103,13 @@ nav a:hover {
     max-width: 1200px;
     margin: 0 auto;
     padding: 50px 20px;
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.75);
 }
+
 
 section {
     margin-bottom: 50px;
@@ -124,7 +121,7 @@ section h2 {
     color: #ff4d4d;
 }
 
-#about:before {
+.about {
     content: "";
     position: absolute;
     top: 5;
@@ -135,16 +132,6 @@ section h2 {
     z-index: -1;
   }
 
-  #works:before {
-    content: "";
-    position: absolute;
-    top: 10;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.726);
-    z-index: -1;
-  }
 
 section p {
     font-size: 18px;
