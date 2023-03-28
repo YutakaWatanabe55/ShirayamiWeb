@@ -8,7 +8,7 @@ body {
     font-family: "Helvetica Neue", sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    background-image: url('https://github.com/YutakaWatanabe55/ShirayamiWeb/raw/main/img/Tokyo_tower.jpg'), url('https://github.com/YutakaWatanabe55/ShirayamiWeb/raw/main/img/shimanami.jpg'), url('https://github.com/YutakaWatanabe55/ShirayamiWeb/raw/main/img/future_1.jpg');
+    background-image: url('https://github.com/YutakaWatanabe55/ShirayamiWeb/raw/main/img/Tokyo_tower.jpg'), url('https://github.com/YutakaWatanabe55/ShirayamiWeb/raw/main/img/shimanami.jpg'), url('https://github.com/YutakaWatanabe55/ShirayamiWeb/raw/main/img/future_1.png');
     background-position: center center, top left, bottom right;
     background-repeat: no-repeat, repeat-x, repeat-y;
     background-size: cover, auto, auto;
