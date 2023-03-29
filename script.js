@@ -15,12 +15,13 @@ window.onload = () => {
 
   backgroundImages.style.backgroundSize = 'cover';
   backgroundImages.style.backgroundPosition = 'center center';
-};
 
-window.onload = () => {
+
   var slideIndex = 1;
 showSlides(slideIndex);
-}
+
+};
+
 
 var slideIndex = 1;
 showSlides(slideIndex);
