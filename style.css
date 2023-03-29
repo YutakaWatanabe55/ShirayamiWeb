@@ -101,6 +101,7 @@ nav a:hover {
     padding: 10px 20px;
     border-radius: 7px;
     text-decoration: none;
+    margin-bottom: 30px;
 }
 
 .container {
@@ -113,6 +114,7 @@ nav a:hover {
     background-position: center;
     background-color: rgba(0, 0, 0, 0.75);
     color: #fff;
+    margin-bottom: 30px;
 }
 
 
@@ -143,6 +145,111 @@ section p {
     margin-bottom: 20px;
     color: #fff;
 }
+
+.work {
+    margin-bottom: 60px;
+  }
+  
+  .work:first-child {
+    margin-top: 30px;
+  }
+  
+  .work img {
+    margin-bottom: 30px;
+  }
+  
+  .work h3 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff; /* 文字色 */
+    background-color: #ff4242ad; /* 背景色 */
+    padding: 5px; /* 背景色の余白 */
+    border-radius: 8px;
+  }
+  
+  .work p {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  .vtuber {
+    margin-bottom: 60px;
+  }
+  
+  .vtuber:first-child {
+    margin-top: 30px;
+  }
+  
+  .vtuber img {
+    margin-bottom: 30px;
+  }
+  
+  .vtuber h3 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff; /* 文字色 */
+    background-color: #ff4242ad; /* 背景色 */
+    padding: 5px; /* 背景色の余白 */
+    border-radius: 8px;
+  }
+  
+  .vtuber p {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  .witch {
+    margin-bottom: 60px;
+  }
+  
+  .witch:first-child {
+    margin-top: 30px;
+  }
+  
+  .witch img {
+    margin-bottom: 30px;
+  }
+  
+  .witch h3 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff; /* 文字色 */
+    background-color: #ff4242ad; /* 背景色 */
+    padding: 5px; /* 背景色の余白 */
+    border-radius: 8px;
+  }
+  
+  .witch p {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  .cg {
+    margin-bottom: 60px;
+  }
+  
+  .cg:first-child {
+    margin-top: 30px;
+  }
+  
+  .cg img {
+    margin-bottom: 30px;
+  }
+  
+  .cg h3 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff; /* 文字色 */
+    background-color: #ff4242ad; /* 背景色 */
+    padding: 5px; /* 背景色の余白 */
+    border-radius: 8px;
+  }
+  
+  .cg p {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
 
 .card {
     background-color: #000;
