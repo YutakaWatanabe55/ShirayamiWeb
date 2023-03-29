@@ -16,16 +16,27 @@ setInterval(() => {
   backgroundImages.style.backgroundPosition = 'center center';
 };
 
-const slideshow = document.querySelector('.slideshow');
-const images = slideshow.querySelectorAll('img');
-const interval = 3000;
-let currentSlide = 0;
+window.onload = () => {
+var slideIndex = 1;
+showSlides(slideIndex);
 
-function nextSlide() {
-  images[currentSlide].classList.remove('active');
-  currentSlide = (currentSlide + 1) % images.length;
-  images[currentSlide].classList.add('active');
+function plusSlides(n) {
+  showSlides((slideIndex += n));
 }
 
-images[currentSlide].classList.add('active');
-setInterval(nextSlide, interval);
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (!slides || slides.length === 0) return;
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex - 1].style.display = "block";
+}
+}
