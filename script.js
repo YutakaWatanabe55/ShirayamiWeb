@@ -15,3 +15,17 @@ setInterval(() => {
   backgroundImages.style.backgroundSize = 'cover';
   backgroundImages.style.backgroundPosition = 'center center';
 };
+
+const slideshow = document.querySelector('.slideshow');
+const images = slideshow.querySelectorAll('img');
+const interval = 3000;
+let currentSlide = 0;
+
+function nextSlide() {
+  images[currentSlide].classList.remove('active');
+  currentSlide = (currentSlide + 1) % images.length;
+  images[currentSlide].classList.add('active');
+}
+
+images[currentSlide].classList.add('active');
+setInterval(nextSlide, interval);
