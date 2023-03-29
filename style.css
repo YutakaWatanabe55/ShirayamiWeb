@@ -114,7 +114,7 @@ nav a:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.83);
     color: #fff;
     margin-bottom: 30px;
 }
@@ -252,6 +252,11 @@ section p {
   .cg p {
     margin-bottom: 20px;
     font-size: 20px;
+  }
+
+  footer p {
+    background-color: #000;
+    color: #fff;
   }
 
   .slideshow-container {
