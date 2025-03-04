@@ -16,10 +16,22 @@ window.onload = () => {
   backgroundImages.style.backgroundSize = 'cover';
   backgroundImages.style.backgroundPosition = 'center center';
 
-
- // var slideIndex = 1;
-//showSlides(slideIndex);
-
+  // EmailJSの送信処理
+  const form = document.querySelector('form');
+  form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      emailjs.send('service_1mrxjba', 'template_wzedz25', {
+          name: form.name.value,
+          email: form.email.value,
+          message: form.message.value
+      })
+      .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('メッセージが送信されました。');
+          form.reset();
+      }, function(error) {
+          console.log('FAILED...', error);
+          alert('メッセージの送信に失敗しました。');
+      });
+  });
 };
-
-

@@ -1,3 +1,12 @@
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("YOUR_USER_ID"); // EmailJSのユーザーIDに置き換えてください
+        })();
+    </script>
+</body>
+</html>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -51,7 +60,7 @@
           <div class="work">
             <h3><a href="works.html#witch">VRゲーム制作</a></h3>
           </div>
-          <div class="work" style="margin-bottom: 20px;">
+          <div class="work">
             <h3><a href="works.html#cg">ギャラリー</a></h3>
           </div>
         </div>
@@ -59,7 +68,7 @@
       <section id="contact">
         <div class="container">
             <h2 class="title">お問い合わせ</h2>
-            <form action="https://script.google.com/u/0/home/projects/16ecB5D2Bs2BBuCJWnntrEabhcMPWvSf3sgjf82ykYRlWdK2MIyE7ha1Q/exec" method="post" onsubmit="event.preventDefault(); google.script.run.withSuccessHandler(onSuccess).onSubmit(this);">
+            <form action="mailto:yutaka.siraga.55@gmail.com" method="post" enctype="text/plain">
                 <label for="name">お名前</label>
                 <input type="text" id="name" name="name" required>
                 <label for="email">メールアドレス</label>
