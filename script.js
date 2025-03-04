@@ -33,7 +33,7 @@ window.onload = () => {
           form.reset();
       }, function(error) {
           console.log('FAILED...', error);
-          alert('メッセージの送信に失敗しました。\nエラー内容: ' + JSON.stringify(error));
+          alert('メッセージの送信ごときに失敗しました。\nエラー内容: ' + JSON.stringify(error));
       });
   });
 };
