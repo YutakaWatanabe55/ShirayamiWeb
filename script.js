@@ -1,4 +1,5 @@
 window.onload = () => {
+
   const backgrounds = [
     'https://github.com/YutakaWatanabe55/ShirayamiWeb/raw/main/img/Tokyo_tower.jpg',
     'https://github.com/YutakaWatanabe55/ShirayamiWeb/raw/main/img/shimanami.jpg',
@@ -20,6 +21,7 @@ window.onload = () => {
   const form = document.querySelector('form');
   form.addEventListener('submit', function(event) {
       event.preventDefault();
+
       emailjs.send('service_1mrxjba', 'template_wzedz25', {
           name: form.name.value,
           email: form.email.value,
@@ -31,7 +33,7 @@ window.onload = () => {
           form.reset();
       }, function(error) {
           console.log('FAILED...', error);
-          alert('メッセージの送信に失敗しました。');
+          alert('メッセージの送信に失敗しました。\nエラー内容: ' + JSON.stringify(error));
       });
   });
 };
