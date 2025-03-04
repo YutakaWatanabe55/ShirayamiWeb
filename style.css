@@ -6,9 +6,8 @@
 
 body {
     font-family: "Helvetica Neue", sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-        
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 #background-images {
@@ -18,13 +17,11 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-  }
+}
 
-
-  
 header {
-    background-color: #000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     position: fixed;
     top: 0;
     left: 0;
@@ -64,7 +61,6 @@ nav a:hover {
     align-items: center;
     flex-direction: column;
 }
-
 
 #hero h1 {
     font-size: 48px;
@@ -119,7 +115,6 @@ nav a:hover {
     margin-bottom: 30px;
 }
 
-
 section {
     margin-bottom: 50px;
 }
@@ -139,8 +134,7 @@ section h2 {
     height: 50%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: -1;
-  }
-
+}
 
 section p {
     font-size: 18px;
@@ -150,17 +144,19 @@ section p {
 
 .work {
     margin-bottom: 60px;
-  }
-  
-  .work:first-child {
+}
+
+.work:first-child {
     margin-top: 30px;
-  }
-  
-  .work img {
+}
+
+.work img {
+    width: 100%;
+    height: auto;
     margin-bottom: 30px;
-  }
-  
-  .work h3 {
+}
+
+.work h3 {
     margin-bottom: 30px;
     font-size: 24px;
     font-weight: bold;
@@ -168,117 +164,120 @@ section p {
     background-color: #ff4242ad; /* 背景色 */
     padding: 5px; /* 背景色の余白 */
     border-radius: 8px;
-  }
-  
-  .work p {
+}
+
+.work p {
     margin-bottom: 20px;
     font-size: 20px;
     color: #ffffff;
-  }
-  .vtuber {
-    margin-bottom: 60px;
-  }
-  
-  .vtuber:first-child {
-    margin-top: 30px;
-  }
-  
-  .vtuber img {
-    margin-bottom: 30px;
-  }
-  
-  .vtuber h3 {
-    margin-bottom: 30px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff; /* 文字色 */
-    background-color: #ff4242ad; /* 背景色 */
-    padding: 5px; /* 背景色の余白 */
-    border-radius: 8px;
-  }
-  
-  .vtuber p {
-    margin-bottom: 20px;
-    font-size: 20px;
-  }
-  .witch {
-    margin-bottom: 60px;
-  }
-  
-  .witch:first-child {
-    margin-top: 30px;
-  }
-  
-  .witch img {
-    margin-bottom: 30px;
-  }
-  
-  .witch h3 {
-    margin-bottom: 30px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff; /* 文字色 */
-    background-color: #ff4242ad; /* 背景色 */
-    padding: 5px; /* 背景色の余白 */
-    border-radius: 8px;
-  }
-  
-  .witch p {
-    margin-bottom: 20px;
-    font-size: 20px;
-  }
-  .cg {
-    margin-bottom: 60px;
-  }
-  
-  .cg:first-child {
-    margin-top: 30px;
-  }
-  
-  .cg img {
-    margin-bottom: 30px;
-  }
-  
-  .cg h3 {
-    margin-bottom: 30px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff; /* 文字色 */
-    background-color: #ff4242ad; /* 背景色 */
-    padding: 5px; /* 背景色の余白 */
-    border-radius: 8px;
-  }
-  
-  .cg p {
-    margin-bottom: 20px;
-    font-size: 20px;
-  }
+}
 
-  footer p {
+.vtuber {
+    margin-bottom: 60px;
+}
+
+.vtuber:first-child {
+    margin-top: 30px;
+}
+
+.vtuber img {
+    margin-bottom: 30px;
+}
+
+.vtuber h3 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff; /* 文字色 */
+    background-color: #ff4242ad; /* 背景色 */
+    padding: 5px; /* 背景色の余白 */
+    border-radius: 8px;
+}
+
+.vtuber p {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.witch {
+    margin-bottom: 60px;
+}
+
+.witch:first-child {
+    margin-top: 30px;
+}
+
+.witch img {
+    margin-bottom: 30px;
+}
+
+.witch h3 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff; /* 文字色 */
+    background-color: #ff4242ad; /* 背景色 */
+    padding: 5px; /* 背景色の余白 */
+    border-radius: 8px;
+}
+
+.witch p {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.cg {
+    margin-bottom: 60px;
+}
+
+.cg:first-child {
+    margin-top: 30px;
+}
+
+.cg img {
+    margin-bottom: 30px;
+}
+
+.cg h3 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff; /* 文字色 */
+    background-color: #ff4242ad; /* 背景色 */
+    padding: 5px; /* 背景色の余白 */
+    border-radius: 8px;
+}
+
+.cg p {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+footer p {
     background-color: #000;
     color: #fff;
-  }
+}
 
-  #icon {
+#icon {
     width: 32px;
     height: 32px;
     background-color: #000000;
     background-size: 100%;
     border-radius: 5px;
-  }
+}
 
-  .slideshow-container {
+.slideshow-container {
     max-width: 1000px;
     position: relative;
     margin: auto;
-  }
-  
-  .mySlides {
+}
+
+.mySlides {
     display: none;
-  }
-  
-  .prev,
-  .next {
+}
+
+.prev,
+.next {
     position: absolute;
     top: 50%;
     width: auto;
@@ -290,17 +289,17 @@ section p {
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-  }
-  
-  .next {
+}
+
+.next {
     right: 0;
     border-radius: 3px 0 0 3px;
-  }
-  
-  .prev:hover,
-  .next:hover {
+}
+
+.prev:hover,
+.next:hover {
     background-color: rgba(0, 0, 0, 0.8);
-  }
+}
 
 .card {
     background-color: #000;
@@ -321,49 +320,50 @@ section p {
 }
 
 .card h3 {
-  font-size: 32px;
-  margin-bottom: 10px;
-  color: #fcf162;
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #fcf162;
 }
 
 .card p {
     font-size: 16px;
     margin-bottom: 10px;
     color: #fff;
-    }
-    
-    .card a {
+}
+
+.card a {
     color: #fff;
     text-decoration: none;
     transition: color 0.2s;
-    }
-    
-    .card a:hover {
+}
+
+.card a:hover {
     color: #ff6666;
-    }
-    
-    @media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 600px) {
     #hero h1 {
-    font-size: 64px;
+        font-size: 64px;
     }
     #hero p {
-    font-size: 18px;
+        font-size: 18px;
     }
-    
+
     section h2 {
-    font-size: 24px;
+        font-size: 24px;
     }
-    
+
     section p {
-    font-size: 16px;
+        font-size: 16px;
     }
-    
+
     .card {
-    margin-bottom: 50px;
+        margin-bottom: 50px;
     }
-    }
-    .description {
-        text-align: justify;
-        margin: 0 auto;
-        max-width: 600px;
-      }
+}
+
+.description {
+    text-align: justify;
+    margin: 0 auto;
+    max-width: 600px;
+}
