@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ブロック崩しゲーム</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ゲーム用のスタイル（必要に応じて追記） */
+    .game-container {
+      text-align: center;
+      padding: 20px;
+      margin-top: 80px; /* ヘッダー分の余白 */
+    }
+    #gameCanvas {
+      display: block;
+      margin: 0 auto;
+      background-color: #111;
+      border: 2px solid #ff4d4d;
+    }
+    .back-button {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #ff4d4d;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <h1>ブロック崩しゲーム</h1>
+    <canvas id="gameCanvas" width="480" height="320"></canvas>
+    <br>
+    <a href="index.html" class="back-button">ホームへ戻る</a>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
