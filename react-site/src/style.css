@@ -1,0 +1,415 @@
+/* =======================================
+   Reset & Global Styles
+========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    background: #000; /* 背景のフォールバックカラー */
+    color: #fff;
+  }
+  
+  /* =======================================
+     Background Images
+  ========================================== */
+  #background-images {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  /* =======================================
+     Header & Navigation
+  ========================================== */
+  header {
+    background-color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.2s;
+  }
+  
+  nav a:hover {
+    color: #ff4d4d;
+  }
+  
+  /* =======================================
+     Hero Section
+  ========================================== */
+  #hero {
+    background-color: rgba(0, 0, 0, 0.75);
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #hero h1 {
+    font-size: 48px;
+    color: #ff4d4d;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+  }
+  
+  #hero p {
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+  }
+  
+  /* =======================================
+     Buttons & Titles
+  ========================================== */
+  .button {
+    display: inline-block;
+    background-color: #ff4d4d;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+  }
+  
+  .button:hover {
+    background-color: #000;
+  }
+  
+  .title {
+    display: inline-block;
+    background-color: #ff4d4d;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 7px;
+    text-decoration: none;
+    margin-bottom: 30px;
+  }
+  
+  /* =======================================
+     Containers & Sections
+  ========================================== */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.83);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  
+  section {
+    margin-bottom: 50px;
+  }
+  
+  section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ff4d4d;
+  }
+  
+  section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  /* =======================================
+     コンテンツブロック（work / vtuber / witch / cg）
+     ※各セクションのスタイルは統一化しています
+  ========================================== */
+
+  /* 自己紹介セクションのコンテナ拡張 */
+.about-container {
+    /* 既存の .container のスタイルを上書き/補足するならここに */
+    margin-bottom: 2rem; /* セクションの下余白を追加 */
+  }
+  
+  /* 写真とテキストを横並びに配置するためのFlexレイアウト */
+  .about-content {
+    display: flex;
+    align-items: flex-start; /* 写真とテキストの上端をそろえる */
+    gap: 2rem; /* 写真とテキストの間隔 */
+    margin-top: 2rem; /* タイトルとの間隔 */
+  }
+  
+  /* 写真のスタイリング */
+  .profile-image {
+    width: 180px;          /* 好みで変更 */
+    height: auto;
+    border-radius: 8px;    /* 角丸 */
+    object-fit: cover;     /* 画像を切り抜いて表示 */
+    border: 2px solid #fff;/* 白い枠線をつける */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* 画像に影を付ける */
+  }
+  
+  /* テキスト部分のスタイリング */
+  .about-text {
+    flex: 1; /* 画像以外の余った領域を使う */
+  }
+  
+  /* リストのデザイン調整 */
+  .about-list {
+    list-style: none;  /* デフォルトのリストマーカーを消す */
+    padding-left: 0;
+    font-size: 1.1rem; /* 文字サイズの微調整 */
+    line-height: 1.6;  /* 行間 */
+  }
+  
+  /* 各リスト項目の先頭にカスタムマーカーを付ける例 */
+  .about-list li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem; /* マーカー分の余白を確保 */
+  }
+  
+  .about-list li::before {
+    content: "•";            /* マーカーとして黒丸を使用 */
+    color: #ff4d4d;          /* マーカーの色 */
+    font-weight: bold;
+    position: absolute;
+    left: 0;                 /* リストの先頭に配置 */
+    top: 0;
+  }
+  
+  /* リンク色の調整（必要に応じて） */
+  .about-list a {
+    color: #ff4d4d;          /* リンク色を目立たせる */
+    text-decoration: none;
+  }
+  .about-list a:hover {
+    text-decoration: underline;
+  }
+  
+  /* 小さな画面（スマホなど）でのレイアウト調整 */
+  @media screen and (max-width: 600px) {
+    .about-content {
+      flex-direction: column; /* 縦並びにする */
+      align-items: center;    /* センター揃え */
+      text-align: center;
+    }
+    
+    .profile-image {
+      margin-bottom: 1rem;
+    }
+    
+    .about-text {
+      flex: unset; /* flexをリセット */
+    }
+  }
+
+  
+  
+  .work,
+  .vtuber,
+  .witch,
+  .cg {
+    margin-bottom: 60px;
+  }
+  
+  .work:first-child,
+  .vtuber:first-child,
+  .witch:first-child,
+  .cg:first-child {
+    margin-top: 30px;
+  }
+  
+  .work img,
+  .vtuber img,
+  .witch img,
+  .cg img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+  }
+  
+  .work h3,
+  .vtuber h3,
+  .witch h3,
+  .cg h3 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff4242ad;
+    padding: 5px;
+    border-radius: 8px;
+  }
+  
+  .work p,
+  .vtuber p,
+  .witch p,
+  .cg p {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #fff;
+  }
+  
+  /* =======================================
+     Footer
+  ========================================== */
+  footer {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer p {
+    margin-top: 10px;
+  }
+  
+  /* =======================================
+     アイコン・スライドショー・カード
+  ========================================== */
+  #icon {
+    width: 32px;
+    height: 32px;
+    background-color: #000;
+    background-size: 100%;
+    border-radius: 5px;
+  }
+  
+  /* スライドショー */
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  .mySlides {
+    display: none;
+  }
+  
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* カード */
+  .card {
+    background-color: #000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .card h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #fcf162;
+  }
+  
+  .card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .card a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .card a:hover {
+    color: #ff6666;
+  }
+  
+  /* =======================================
+     その他コンテンツ
+  ========================================== */
+  .description {
+    text-align: justify;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  
+  /* =======================================
+     Responsive Settings
+  ========================================== */
+  @media screen and (max-width: 600px) {
+    #hero h1 {
+      font-size: 64px;
+    }
+    #hero p {
+      font-size: 18px;
+    }
+    section h2 {
+      font-size: 24px;
+    }
+    section p {
+      font-size: 16px;
+    }
+    .card {
+      margin-bottom: 50px;
+    }
+  }
+  
